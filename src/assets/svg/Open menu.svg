@@ -1,0 +1,5 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-label="Open menu" role="img" width="16"  height="16" >
+                  <title>Open menu</title>
+                  <path id="for-open" d="M0 9V7h16v2H0zm0-4V3h16v2H0zm0 8v-2h16v2H0z"></path>
+                  <path id="for-close" d="M14.6 0L8 6.6 1.4 0 0 1.4 6.6 8 0 14.6 1.4 16 8 9.4l6.6 6.6 1.4-1.4L9.4 8 16 1.4 14.6 0z"></path>
+                </svg>
