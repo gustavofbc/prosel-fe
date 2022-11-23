@@ -4,8 +4,10 @@ export default createGlobalStyle`
   :root {
   --black: #202021;
   --blue: #1C6AE4;
+  --blue-300: #1554BB;
   --blue-dark: #000A51;
   --yellow: #FCFDD1;
+  --yellow-dark: #FEE37C;
 	--white: #F4F4F5;
 	
 }
@@ -21,6 +23,7 @@ export default createGlobalStyle`
     background: #fff;
     color: #FFF;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body, input, button {

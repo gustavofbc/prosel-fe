@@ -1,6 +1,8 @@
 import './styles'
-import { Container, HeaderPage, Logo, Menu, Nav, StartedButton } from './styles';
+import { Container, HeaderPage, Logo, Menu, Nav, SubMenu } from './styles';
 import BettermentLogo from '../../assets/Betterment-Logo.png'
+import { AiOutlineRight } from 'react-icons/ai'
+import Button from '../Button';
 
 export default function Header() {
     function toggleMenu(event: any) {
@@ -25,9 +27,9 @@ export default function Header() {
         <>
             <HeaderPage>
                 <ul>
-                    <li><a href="/" className='active'>INDIVIDUALS</a></li>
-                    <li><a href="/">EMPLOYERS</a></li>
-                    <li><a href="/">ADVISORS</a></li>
+                    <li><a href="/" className='header-item active'>INDIVIDUALS</a></li>
+                    <li><a href="/" className='header-item'>EMPLOYERS</a></li>
+                    <li><a href="/" className='header-item'>ADVISORS</a></li>
                 </ul>
             </HeaderPage>
             <Container>
@@ -36,19 +38,60 @@ export default function Header() {
                 </Logo>
 
                 <Nav id="nav">
-                    <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false" onClick={(event) => toggleMenu(event)}>Menu
+                    <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false" onClick={(event) => toggleMenu(event)}>
                         <span id="hamburguer"></span>
                     </button>
-                    <Menu id="menu" role="menu">
-                        <li><a href="/">Investing</a></li>
-                        <li><a href="/">Cash</a></li>
-                        <li><a href="/">Planning</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Education</a></li>
-                    </Menu>
-                    <div>
-                        <a href="/">Log in</a>
-                        <StartedButton>Get started</StartedButton>
+                    <div className='content'>
+
+                        <Menu id="menu" role="menu">
+                            <li>
+                                <a className='item'>Investing</a>
+                                <SubMenu className='options'>
+                                    <li><a href="/">Automated investing <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">IRAs and 401(k) <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Socially responsible investing <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Crypto investing <AiOutlineRight className='arrow' size={12} /></a></li>
+                                </SubMenu>
+                            </li>
+                            <li>
+                                <a className='item'>Cash</a>
+                                <SubMenu className='options'>
+                                    <li><a href="/">High-yield cash account <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Checking account <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Rewards <AiOutlineRight className='arrow' size={12} /></a></li>
+                                </SubMenu>
+                            </li>
+                            <li>
+                                <a className='item'>Planning</a>
+                                <SubMenu className='options'>
+                                    <li><a href="/">Retirement Planning <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Track your goals <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">All-in-one dashboard <AiOutlineRight className='arrow' size={12} /></a></li>
+                                </SubMenu>
+                            </li>
+                            <li>
+                                <a className='item'>About</a>
+                                <SubMenu className='options'>
+                                    <li><a href="/">Who we are <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Investment philosophy <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Pricing <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Press <AiOutlineRight className='arrow' size={12} /></a></li>
+                                </SubMenu>
+                            </li>
+                            <li>
+                                <a className='item'>Education</a>
+                                <SubMenu className='options'>
+                                    <li><a href="/">For individuals and families <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">For employees <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">Help center <AiOutlineRight className='arrow' size={12} /></a></li>
+                                    <li><a href="/">FAQ <AiOutlineRight className='arrow' size={12} /></a></li>
+                                </SubMenu>
+                            </li>
+                        </Menu>
+                        <div>
+                            <a href="/" className='login'>Log in</a>
+                            <Button />
+                        </div>
                     </div>
                 </Nav>
             </Container>

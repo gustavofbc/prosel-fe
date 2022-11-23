@@ -1,8 +1,11 @@
-import Home from "./pages/Home";
+import { BrowserRouter } from "react-router-dom";
+import Main from "./Main";
 
 function App() {
   return (
-    <Home />
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
   );
 }
 
