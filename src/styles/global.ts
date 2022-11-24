@@ -9,7 +9,7 @@ export default createGlobalStyle`
   --yellow: #FCFDD1;
   --yellow-dark: #FEE37C;
 	--white: #F4F4F5;
-	
+	--red: #FF0E3C;
 }
 
   * {
